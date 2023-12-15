@@ -1,0 +1,63 @@
+.form-container2 {
+  width: 40%;
+    height: 30%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 2%;
+    background-color: #AAFAFF;
+    text-align: center;
+    font-family: PressStart2P;
+    font-size: 90%;
+}
+
+.input-field {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  
+}
+
+.signin-button {
+  width: 35%;
+    background-color: #FFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-family: PressStart2P;
+    font-size: 130%;
+}
+.Texto_Titulo2{
+  font-size: 350%;
+  font-family: "PressStart2P", monospace;
+  text-align: center;
+  line-height: 0.7;
+  padding-bottom: 2%;
+}
+.Texto_signin{
+  font-size: 130%;
+  text-align: center;
+  padding:bottom;
+  font-family:PressStart2P;
+}
+.Texto_registered{
+  font-size: 100%;
+  text-align: center;
+  padding:bottom;
+  font-family:PressStart2P;
+}
+html{
+  background-color: #6AD0D0;
+}
+h1{
+  line-height: 1.5;
+}
+.Logo{
+  width: 30%;
+  height: 50%;
+}

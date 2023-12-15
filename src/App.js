@@ -1,50 +1,43 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import LoginPage from './Log_in/login_page.js';  // Asegúrate de poner el nombre correcto
+import Signinpage from './Sign_in/signin_page.js';  // Asegúrate de poner el nombre correcto 
+import Recuperacion from './Recuperar_contraseña/Recuperacion.js';
+import RecuperacionPage from './Recuperar_contraseña/Recuperacion_page.js';
+import paginaprincipal_page from './pagina_principal/paginaprincipal.js';
+import gamerHeavenImage from 'C:/Users/Joan Atrio/proyecto_paginaweb_videojuegos/src/img/gamerheaven.png';
 
-function ListaDeGeneros() {
-  const [generos, setGeneros] = useState([]);
-  const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchGeneros = async () => {
-      try {
-        const { data } = await axios.get('https://api.rawg.io/api/genres?key=a2a12ad6958442a49222489fa57fe7c8');
-        setGeneros(data.results);
-      } catch (error) {
-        console.error('Hubo un error al obtener los datos:', error);
-        setError('Hubo un error al obtener los datos');
-      }
-    };
-
-    fetchGeneros();
-  }, []);
-
-  if (error) return <div>{error}</div>;
-
+function App() {
   return (
-    <div>
-      <h1>Lista de Géneros</h1>
-      {generos.length > 0 ? (
-        <ul>
-          {generos.map((genero) => (
-            <li key={genero.id}>
-              <h2>{genero.name}</h2>
-              <img src={genero.image_background} alt={genero.name} width="300" />
-              <ul>
-                {genero.games.map((juego) => (
-                  <li key={juego.id}>
-                    {juego.name}
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>Cargando géneros...</p>
-      )}
-    </div>
+    
+    <Router>
+      <div >
+          <img src={gamerHeavenImage} alt="Gamer heaven" className="Logo"/>
+        </div>
+
+      <div className="App">
+        <main>
+          <Routes>
+            <Route path="/" element={
+              <div>
+                {/* Pantalla de inicio con enlaces a Login y Registro */}
+                <h1>Bienvenido a la aplicación</h1>
+                <Link to="/login">Login</Link>
+                <Link to="/signin">Registrarse</Link>
+
+              </div>
+            } />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signin" element={<Signinpage />} />
+            <Route path="/Recuperacion" element={<RecuperacionPage/>} />
+            {/* Agrega más rutas según sea necesario */}
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
-export default ListaDeGeneros;
+export default App;

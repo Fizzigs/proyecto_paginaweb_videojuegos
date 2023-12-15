@@ -1,0 +1,77 @@
+/* styles.css */
+
+.form-container3 {
+    width: 40%;
+    height: 30%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 8%;
+    background-color: #AAFAFF;
+    text-align: center;
+    font-family: PressStart2P;
+    font-size: 90%;
+    }
+
+    .boton-recuperar{
+        width:fit-content;
+        height: fit-content;
+        background-color: #FFFF;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+        font-family: PressStart2P;
+        margin-top: 5%;
+        font-size: 130%;
+    }
+    .input-recuperar{
+        width: 60%;
+        background-color: #FFFF;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+        font-family: PressStart2P;
+        margin-top: 5%;
+        font-size: 70%;
+        /* padding-right: 13%; */
+        align-items: center;
+        justify-content: center;
+        margin-left: 18%;
+    }
+    .Texto-password{
+        font-size: 250%;
+        margin-bottom: 10%;
+    }
+    .Texto-mail{
+        font-size: 150%;
+    text-align: center;
+    padding:bottom;
+    font-family:PressStart2P;
+    }
+    .boton-backtologin{
+        width:fit-content;
+        height: fit-content;
+        background-color: #FFFF;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+        font-family: PressStart2P;
+        font-size: 130%;
+    }
+
+    .test{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    .Logo{
+        width: 30%;
+        height: 50%;
+      }
