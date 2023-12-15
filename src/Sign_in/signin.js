@@ -41,7 +41,7 @@ function Signin() {
           <a href="/login">Already registered?</a>
         </p>
         <div>
-          <img src={gamerHeavenImage} alt="Gamer heaven" class="Logo"/>
+          <img src={gamerHeavenImage} href="/login.js"alt="Gamer heaven" class="Logo"/>
         </div>
         <button onClick={handleSignin} className="signin-button">Sign Up</button> {}
       </form>
