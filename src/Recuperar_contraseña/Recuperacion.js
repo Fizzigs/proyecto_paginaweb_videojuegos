@@ -17,7 +17,8 @@ function Recuperacion() {
   };
 
   return (
-    <div className="form-container3">
+    <div className="container">
+      <div className="form-container3">
       <h2 className="Texto-password" >Restore password</h2>
       <form onSubmit={handleRecoverPassword}>
         <div className="test">
@@ -31,19 +32,23 @@ function Recuperacion() {
             required
             style={{display: 'block'}}
           />
+          
         </div>
         <div>
           <button type="submit" className="boton-recuperar">Restore password</button>
         </div>
       </form>
-        <div>
+      <div>
+          <a href="/">
           <img src={gamerHeavenImage} alt="Gamer heaven" className="Logo"/>
+          </a>
         </div>
-
         <div>
           <button onClick={() => navigate('/login')}className="boton-backtologin">Go back to login</button>
         </div>
     </div>
+    </div>
+    
   );
 }
 

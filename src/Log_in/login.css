@@ -1,17 +1,15 @@
 /* styles.css */
 
 .form-container1 {
-    width: 40%;
-    height: 30%;
-    margin: 0 auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 3.5%;
-    background-color: #AAFAFF;
-    text-align: center;
-    font-family: PressStart2P;
-    font-size: 90%;
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #AAFAFF;
+  text-align: center;
+  font-family: PressStart2P;
+  font-size: 90%;
+
   }
   
   .input-field {
@@ -21,6 +19,8 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
+    font-family: PressStart2P;
+
     
   }
   
@@ -55,4 +55,5 @@
   .Logo{
     width: 30%;
     height: 50%;
+   
   }

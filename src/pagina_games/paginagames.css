@@ -1,0 +1,384 @@
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  .Logo_home{
+    width: 60%;
+    height: 60%;
+  }
+  .bienvenido{
+    width:fit-content ;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 300%;
+    font-family:PressStart2P;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .estructura{
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Puedes ajustar el espaciado entre los elementos según sea necesario */
+    align-items: center;
+    gap: 50px ;
+  }
+  
+  .text_bienvenidos{
+    font-family: PressStart2P;
+    font-size: 560%;
+    color: black;
+  }
+  .texto_login{
+    font-family: PressStart2P;
+    font-size: 120%;
+    color: black;
+  }
+  
+  
+  .modalstyle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  .modalstyle label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .modalstyle button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .modalstyle button:hover {
+    background-color: #555;
+  }
+  .imageneshome{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .imagenes_juegos{
+    height: 30%;
+    width: 30%;
+  }
+  .lista-juegos {
+    text-align: center;
+  }
+  
+  .juegos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Puedes ajustar el valor según prefieras */
+    
+  }
+  
+  .juego-bloque {
+    width: calc(33.33% - 50px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    position: relative;
+  }
+  
+  .juego-imagen-container {
+    width: 100%;
+    height: 220px; /* Ajusta la altura según sea necesario */
+    overflow: hidden; /* Para recortar la imagen si es necesario */
+  }
+  
+  .juego-imagen {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta según prefieras (cover, contain, etc.) */
+    border-radius: 10px;
+  }
+  
+  .overlay-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 40px;
+    width: 40px;
+  }
+  
+  .overlay-info::before {
+    display: block;
+    background-color: #f00; /* Ajusta el color según tu diseño */
+    color: white;
+    width: 20px; /* Ajusta el tamaño según tu diseño */
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .titulo_pagina{
+    text-align: center;
+    font-size: 130%;
+    text-align: center;
+    padding:bottom;
+    font-family:PressStart2P;
+  }
+
+
+.dropdown-btn {
+  background-color: #555;
+  color: white;
+  padding: 10px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown-content button {
+  background-color: #555;
+  color: white;
+  padding: 10px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+.menu-bar {
+  background-color: #333;
+  color: #fff;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000; /* Ajusta el índice z para asegurarte de que la barra esté en la parte superior */
+  height:fit-content ;
+  display: flex;
+  padding-right: 50px;
+  padding-top: 20px;
+  width: 150px; /* Ancho inicial del menú */
+  background-color: black; /* Color de fondo del menú */
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga del menú */
+  padding-left: 20px;
+  position: fixed;
+  overflow-y: auto; /* agregar barra de desplazamiento vertical si es necesario */
+  animation-name: visible;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  border-radius: 10px; /* Puedes ajustar el valor según sea necesario */
+
+}
+
+.menu-bar button {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+}
+
+.menu-bar.expanded .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+.pagina-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenido-container {
+  display: flex;
+  height: fit-content;
+  margin-left: 200px; /* ajusta el margen izquierdo para dejar espacio para el menú */
+  padding: 10px; /* ajusta según tus necesidades */
+  transition: margin-left 0.3s ease; /* Agrega una transición suave al margen izquierdo */
+
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.lista-juegos {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+.menu-container {
+  display: flex;
+}
+
+.menu-bar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.menu-bar a:hover {
+  color: #f1f1f1;
+}
+.menu-bar.expanded {
+  /* Estilos aquí */
+  width: 200px;
+}
+
+/* Estilo del botón de expansión */
+.menu-bar button {
+  background-color: white;
+  color: black;
+  font-family: PressStart2P;
+  border: none;
+  padding: 10px;
+  width: 110%; /* Ajusta el ancho para ocupar todo el espacio disponible */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.main-content {
+  flex: 1; /* Hace que el contenido principal ocupe todo el espacio restante */
+  padding: 40px; /* Añade un relleno para separar el contenido del menú */
+  text-align: left;
+} 
+
+.juego-bloque {
+  width: calc(33.33% - 50px); /* Ancho del bloque de juego, con margen entre bloques */
+  margin: 10px;
+  /* Añade más estilos según sea necesario */
+}
+.menu-bar .submenu-content {
+  display: none;
+  text-align: left;
+}
+.submenu-content {
+  display: none;
+  flex-direction: column;
+  text-align: left;
+}
+
+.menu-bar.expanded .submenu-content {
+  display: flex; /* O el valor que sea apropiado para tu diseño */
+  flex-direction: column;
+  text-align: left;
+}
+.menu-section {
+  margin-bottom: 16px;
+}
+.dropdown-content {
+  display: none;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+}
+
+.menu-bar.expanded .dropdown-content {
+  display: flex;
+  max-height: 500px; /* Ajusta la altura máxima según sea necesario */
+  
+}
+.menubar-style{
+  position: fixed;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  text-align: left;
+}
+.main-container {
+  display: flex;
+  padding-left: 20px;
+  
+}
+.menu-bar-scroll{
+  height: 100px; /* Establece la nueva altura cuando haces scroll */
+  top: 170px; /* Ajusta la posición vertical al hacer scroll */
+  height: fit-content;
+  /* Otras reglas si las hay */
+  transition: height 0.3s ease-out; /* Ajusta la duración y la curva de transición según sea necesario */
+  }
+  .menu-bar-scrolled {
+    transition: height 0.3s ease-out, background-color 0.3s ease-out; /* Ajusta la duración y la curva de transición según sea necesario */
+  }
+  .windows-icon{
+    height: 50px;
+    width: 50px;
+  }
+  .ps4-icon{
+    height: 50px;
+    width: 50px;
+  }
+  .xbox-icon{
+    height: 50px;
+    width: 50px;
+  }
+  .switch-icon{
+    height: 50px;
+    width: 50px;
+    padding: 100px;
+  }
+  .calendar-icon{
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+  }
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

@@ -1,17 +1,10 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link, Switch, Redirect } from 'react-router-dom';
-import LoginPage from './Log_in/login_page.js';  // Asegúrate de poner el nombre correcto
-import Signinpage from './Sign_in/signin_page.js';  // Asegúrate de poner el nombre correcto 
-import Recuperacion from './Recuperar_contraseña/Recuperacion.js';
-import RecuperacionPage from './Recuperar_contraseña/Recuperacion_page.js';
-import PaginagamesPage from './pagina_games/paginagamespage.js';
-import PaginaGames from './pagina_games/paginagames.js';
 import gamerHeavenImage from 'C:/Users/Joan Atrio/proyecto_paginaweb_videojuegos/src/img/gamerheaven.png';
 import usuariopredeterminadoImage from 'C:/Users/Joan Atrio/proyecto_paginaweb_videojuegos/src/img/usuariopredeterminado.png';
 import fondo1Image from 'C:/Users/Joan Atrio/proyecto_paginaweb_videojuegos/src/img/fondo1.png';
-import fondo2Image from 'C:/Users/Joan Atrio/proyecto_paginaweb_videojuegos/src/img/fondo2.png';
-import fondo3Image from 'C:/Users/Joan Atrio/proyecto_paginaweb_videojuegos/src/img/fondo3.png';
+
 import { useState } from 'react';
 import ReactModal from 'react-modal';
 
@@ -65,7 +58,7 @@ const Header = () => {
   
   const imageContainerStyle = {
     width: '110px',
-    height: '110px',
+    height: '100px',
     overflow: 'hidden', //Oculta cualquier parte de la imagen que exceda el contenedor
   };
   
@@ -76,15 +69,19 @@ const Header = () => {
   };
 
   return (
-    <div style={headerStyle}>
+    // <div style={headerStyle}>
+    <div style={{ ...headerStyle, backgroundImage: `url(${fondo1Image})` }}>
+
+      
       <div style={elementStyle}>
           <a href="/">
           <img src={gamerHeavenImage} alt="Gamer heaven" className="Logo_home"/>
           </a>
         </div>
-      
+        
       <div style={elementStyle}>
-        <h1 className="text_bienvenidos">WELCOME!</h1>
+        <h1 className="text_games">GAMES</h1>
+        
       </div>
 
       <div style={elementStylelogin}>
@@ -135,6 +132,11 @@ const headerStyle = {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+  backgroundPosition: 'center center',  // Puedes ajustar estas coordenadas según tus necesidades
+  backgroundImage: "url(C:/Users/Joan Atrio/proyecto_paginaweb_videojuegos/src/img/fondo1.png)",
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',  // Ajusta según tus necesidades, por ejemplo, 'contain'
+  height:'230px'
 };
 
 const elementStylelogin={
@@ -154,7 +156,6 @@ const linkStyle = {
   textDecoration: 'none',
   cursor: 'pointer',
   fontFamily: 'PressStart2P',
-  
 };
 
 const buttonStyle = {
@@ -164,71 +165,5 @@ const buttonStyle = {
   color: 'black',
   cursor: 'pointer',
 };
-const MainPage = () => {
-  
-  const imageContainerStyle = {
-    position: 'relative',
-    height:'21.6vh',
-    
-  };
-  const textOverlayStyle = {
-    position: 'absolute',
-    top: '25%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    color: 'white',
-    fontSize: '4em',
-    fontFamily: 'PressStart2P',
 
-  };
-
-  return (
-    <div>
-      <div style={imageContainerStyle}>
-        <img src={fondo1Image} alt="Gamer heaven" className='imageneshome' />
-        <h1 style={textOverlayStyle}>
-          <a href="/paginagames" class="underline-link" className="clickable-text">GAMES</a>
-        </h1>
-      </div>
-      <div style={imageContainerStyle}>
-        <img src={fondo2Image} alt="Gamer heaven" className='imageneshome' />
-        <h1 style={textOverlayStyle}>
-        <a href="/login" class="underline-link" className="clickable-text">NEWS</a></h1>
-      </div>
-      <div style={imageContainerStyle}>
-        <img src={fondo3Image} alt="Gamer heaven" className='imageneshome' />
-        <h1 style={textOverlayStyle}>
-        <a href="/login" class="underline-link" className="clickable-text">IA</a></h1>
-      </div>  
-    </div>
-  );
-};
-
-
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <main>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <div>
-                  <Header/>
-                  <MainPage/>
-                </div>
-              }
-            />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/signin" element={<Signinpage />} />
-            <Route path="/Recuperacion" element={<RecuperacionPage />} />
-            <Route path="/paginagames" element={<PaginagamesPage/>} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
-  );
-}
-
-export default App;
+export default Header;

@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-
 function ListaDeGeneros() {
   const [generos, setGeneros] = useState([]);
   const [error, setError] = useState(null);
@@ -46,5 +43,3 @@ function ListaDeGeneros() {
     </div>
   );
 }
-
-export default ListaDeGeneros;

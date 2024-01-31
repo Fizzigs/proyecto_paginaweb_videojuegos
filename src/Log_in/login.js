@@ -28,7 +28,8 @@ function Login({onLogin}) {
   }
 
   return (
-    <div className ="form-container1">
+    <div className="container">
+      <div className ="form-container1">
        <form onSubmit={handleSubmit} className="login-form"></form>
       <h1 className ="Texto_Titulo">LOG IN</h1>
       <form>
@@ -57,12 +58,16 @@ function Login({onLogin}) {
         
 
         <div>
+          <a href="/">
           <img src={gamerHeavenImage} alt="Gamer heaven" className="Logo"/>
+          </a>
         </div>
         
         <button type="submit" className="login-button">LOG IN</button>
       </form>
     </div>
+    </div>
+    
   );
 }
 

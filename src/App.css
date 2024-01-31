@@ -24,7 +24,7 @@
   color: #61dafb;
 }
 .Logo_home{
-  width: 15%;
+  width: 50%;
   height: 50%;
 }
 .bienvenido{
@@ -49,7 +49,90 @@
   gap: 120px ;
 }
 
+.text_bienvenidos{
+  font-family: PressStart2P;
+  font-size: 560%;
+  color: black;
+}
+.text_games{
+  font-family: PressStart2P;
+  font-size: 560%;
+  color: white;
+  text-align: center;
+}
+.texto_login{
+  font-family: PressStart2P;
+  font-size: 120%;
+  color: black;
+}
 
+
+.modalstyle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.modalstyle label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.modalstyle button {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.modalstyle button:hover {
+  background-color: #555;
+}
+.imageneshome{
+  width: 100%;
+  height: 100%;
+}
+.underline-link {
+  text-decoration: none; 
+  position: relative;
+  color: white;
+}
+.underline-link:hover::after {
+  content: '';           /* Añade un contenido vacío para crear el elemento */
+  position: absolute;    /* Añade posición absoluta para colocar la línea */
+  left: 0;               /* Coloca la línea al principio del enlace */
+  bottom: -2px;          /* Coloca la línea 2 píxeles debajo del texto */
+  width: 100%;           /* Asegura que la línea se extienda por toda la anchura del enlace */
+  height: 2px;           /* Grosor de la línea */
+  background-color: #61dafb; /* Color de la línea */
+}
+
+
+.underline-link:active::after {
+  transform-origin: bottom left;
+  transform: scale(1, 1);
+}
+
+.clickable-text {
+  text-decoration: none;
+  color: white;
+  font-size: 64px;
+  transition: font-size 0.3s ease; /* Agregamos una transición en el cambio de tamaño */
+}
+
+.clickable-text:active {
+  font-size: 100px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -57,4 +140,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.show{
+  display: block;
+}
+
+.hidden{
+  display: none;
 }

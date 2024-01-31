@@ -1,17 +1,15 @@
 /* styles.css */
 
 .form-container3 {
-    width: 40%;
-    height: 30%;
-    margin: 0 auto;
+    width: 50%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-top: 8%;
     background-color: #AAFAFF;
     text-align: center;
     font-family: PressStart2P;
     font-size: 90%;
+    
     }
 
     .boton-recuperar{
@@ -26,9 +24,10 @@
         font-family: PressStart2P;
         margin-top: 5%;
         font-size: 130%;
+        
     }
     .input-recuperar{
-        width: 60%;
+        width: 80%;
         background-color: #FFFF;
         border: none;
         border-radius: 5px;
@@ -38,10 +37,11 @@
         font-family: PressStart2P;
         margin-top: 5%;
         font-size: 70%;
-        /* padding-right: 13%; */
         align-items: center;
         justify-content: center;
-        margin-left: 18%;
+        margin-left: 8%;
+        width: 80%;
+        border: 1px solid #ccc;
     }
     .Texto-password{
         font-size: 250%;
@@ -49,9 +49,9 @@
     }
     .Texto-mail{
         font-size: 150%;
-    text-align: center;
-    padding:bottom;
-    font-family:PressStart2P;
+        text-align: center;
+        padding:bottom;
+        font-family:PressStart2P;
     }
     .boton-backtologin{
         width:fit-content;
