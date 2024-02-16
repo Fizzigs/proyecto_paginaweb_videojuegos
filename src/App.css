@@ -142,6 +142,17 @@
   }
 }
 
+.texto-modal{
+  font-family: PressStart2P;
+  font-size: 120%;
+  color: black;
+}
+.texto-modal2{
+  font-family: PressStart2P;
+  font-size:small;
+  color: black;
+}
+
 
 .show{
   display: block;

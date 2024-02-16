@@ -1,0 +1,157 @@
+/* Estilo base para la tarjeta */
+.game-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:max-content;
+    }
+.juego-imagen {
+    width:max-content;
+    height: auto;
+    object-fit: cover; /* Ajusta según prefieras (cover, contain, etc.) */
+    border-radius: 10px;
+    height: 200px;
+    width: 350px;
+    transition: transform 0.2s;
+    transform: scale(1.03);
+  }
+  
+ 
+  /* Imagen de la tarjeta */
+  .game-card img {
+    width: 120%;
+    list-style: none;
+    padding: 10;
+    display: flex; /* Usa flexbox */
+    flex-direction: row; /* Dispón los elementos en línea horizontalmente */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+  }
+  
+  /* Contenedor del contenido de la tarjeta */
+  .game-card-info {
+    padding: 10px;
+    background: #808080;
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Título del videojuego */
+  .game-card-title {
+    font-size: 18px;
+    margin: 0;
+    color: white;
+    font-family:PressStart2P;
+    font-size: medium;
+  }
+  
+  /* Rating del videojuego */
+  .game-card-rating {
+    font-size: 16px;
+    color: white;
+    margin: 5px 0;
+    font-family:PressStart2P;
+    font-size: small;
+
+  }
+  
+  /* Botón o acción de juego */
+  .game-card-action {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Añade la transición para un efecto suave */
+    font-family:PressStart2P;
+
+  }
+  .game-card-action:hover { /* Estilos al pasar el ratón por encima */
+    transform: scale(1.04); /* Aplica la escala solo en hover */
+  }
+  .release-card{
+    color: white;
+    font-family:PressStart2P;
+    font-size: small;
+  }
+  .game-card-genres{
+    color: white;
+    font-family:PressStart2P;
+    justify-content: center;
+    text-align: center;
+
+  }
+  .game-card-platforms{
+    color: white;
+    font-family:PressStart2P;
+    font-size: small;
+  }
+  .game-card-platforms ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Usa flexbox */
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan a una nueva línea si no hay suficiente espacio */
+  } 
+  .game-card-platforms li {
+    margin-right: 10px; /* Ajusta el espacio entre las plataformas según sea necesario */
+  }
+  .game-card-rating {
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  :root {
+    --rating-green: map-range(rating, 0, 100, 0, 255);
+    --rating-red: map-range(rating, 0, 100, 255, 0);
+  }
+  
+  .game-card-rating::after {
+    background-color: rgb(
+      255,
+      var(--rating-green),
+      var(--rating-red)
+    );
+  }
+  .game-card-rating.green {
+    color: green; /* Cambia el color para rating entre 90 y 100 */
+  }
+  
+  .game-card-rating.yellow {
+    color: yellow; /* Cambia el color para rating entre 60 y 89 */
+  }
+  
+  .game-card-rating.red {
+    color: red; /* Cambia el color para rating de 59 hacia abajo */
+  }
+    .plataforma-estructura {
+    width: 30px; /* Cambia el tamaño según sea necesario */
+    height: 30px; /* Cambia el tamaño según sea necesario */
+    margin-right: 10px; /* Ajusta el espacio entre las plataformas según sea necesario */
+    justify-content: center;
+  }
+  
+  .plataformas-list li:last-child {
+    margin-right: 0;
+    
+  }
+  .plataforma-estructura-bloque{
+    justify-content: center;
+  }
+  .generos-titulo{
+    display: flex;
+    align-items: center;
+    padding-left: 38%;
+    font-size: small;
+   }

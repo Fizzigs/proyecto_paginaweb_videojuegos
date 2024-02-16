@@ -95,26 +95,26 @@ const Header = () => {
           <img src={selectedImage} alt="Imagen seleccionada" style={imageStyle} className="imagen_seleccionada" />
           <div style={elementStyle}>
 
-      <ReactModal 
-        isOpen={isModalOpen}
-        onRequestClose={handleCloseModal}
-        contentLabel="Cambiar Foto de Perfil">
-        <div className="modalstyle">
-        <h2>Change profile photo</h2>
-        <input
-          type="file"
-          id="fileInput"
-          style={{ display: 'none'}}
-          onChange={handleFileInputChange}
-          accept="image/*"
-        />
-        <label htmlFor="fileInput">Select Image</label>
-        <button onClick = {handleCloseModal} >Cancel</button>
-        <h2>Language</h2>
-        <h2>DarkTheme on or of</h2>
-        <h2>Sign off</h2>
-        </div>
-      </ReactModal>
+        <ReactModal 
+          isOpen={isModalOpen}
+          onRequestClose={handleCloseModal}
+          contentLabel="Cambiar Foto de Perfil">
+          <div className="modalstyle">
+          <h2 className='texto-modal'>Change profile photo</h2>
+          <input
+            type="file"
+            id="fileInput"
+            style={{ display: 'none'}}
+            onChange={handleFileInputChange}
+            accept="image/*"
+          />
+          <label htmlFor="fileInput"className='texto-modal2'>Select Image</label>
+          <button onClick={handleCloseModal} className='texto-modal2'>Cancel</button>
+          <h2>Language</h2>
+          <h2>DarkTheme on or of</h2>
+          <h2>Sign off</h2>
+          </div>
+        </ReactModal>
       </div> 
  
     </div>
