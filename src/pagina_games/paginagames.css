@@ -59,6 +59,21 @@
     font-size: 120%;
     color: black;
   }
+  .texto_lista_games{
+  top: 100%; /* Coloca el mensaje adicional justo debajo del encabezado */
+right: 50%; 
+  width: 90%;
+  max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+  padding: 10px;
+  background-color: #f2f2f2; /* Color de fondo del mensaje adicional */
+  border: 1px solid #ccc; /* Borde del mensaje adicional */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 14px;
+  color: black; /* Color del texto del mensaje adicional */
+  font-family: PressStart2P;
+  /* Otros estilos según tus preferencias */
+
+  }
   
   
   .modalstyle{
@@ -199,13 +214,10 @@
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   border-radius: 10px; /* Puedes ajustar el valor según sea necesario */
+  text-align: center;
 
 }
 
-.menu-bar button {
-  margin: 5px;
-  cursor: pointer;
-}
 
 .dropdown-content {
   display: none;
@@ -271,6 +283,8 @@
   padding: 10px;
   width: 110%; /* Ajusta el ancho para ocupar todo el espacio disponible */
   text-align: left; /* Alinea el texto a la izquierda */
+  margin: 5px;
+  cursor: pointer;
 }
 
 .main-content {
@@ -286,7 +300,7 @@
 }
 .menu-bar .submenu-content {
   display: none;
-  text-align: left;
+  text-align: center;
 }
 .submenu-content {
   display: none;
@@ -326,7 +340,7 @@
 }
 .menu-bar-scroll{
   height: 100px; /* Establece la nueva altura cuando haces scroll */
-  top: 100px; /* Ajusta la posición vertical al hacer scroll */
+  top: 70px; /* Ajusta la posición vertical al hacer scroll */
   height: fit-content;
   /* Otras reglas si las hay */
   transition: height 0.3s ease-out; /* Ajusta la duración y la curva de transición según sea necesario */
@@ -415,11 +429,47 @@
     background-color: #6AD0D0; /* Gris oscuro */
   }
   
-  /* Estilo para los botones de flecha de la barra de desplazamiento */
-
-  
   /* Estilo para la esquina entre la barra de desplazamiento vertical y horizontal */
   ::-webkit-scrollbar-corner {
     background-color: #2c3e50; /* Gris oscuro */
   }
-  
+  .reset_list{
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    }
+    .Logo_reiniciar{
+      height: 25px;
+      width: 25px;
+      float: right; /* Alinea a la izquierda */
+    }
+    .load-more-button{
+      background-color: white;
+      color: black;
+      font-family: PressStart2P;
+      border: none;
+      padding: 10px;
+      text-align: left; /* Alinea el texto a la izquierda */
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 10px; /* Puedes ajustar el valor según sea necesario */
+
+      }
+      .modalstyle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .texto-modal{
+        font-family: PressStart2P;
+        font-size: 120%;
+        color: black;
+      }
+      .texto-modal2{
+        font-family: PressStart2P;
+        font-size:small;
+        color: black;
+      }

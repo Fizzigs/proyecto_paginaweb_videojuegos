@@ -88,6 +88,7 @@
     font-family:PressStart2P;
     justify-content: center;
     text-align: center;
+    font-size: 85%;
 
   }
   .game-card-platforms{
@@ -154,4 +155,19 @@
     align-items: center;
     padding-left: 38%;
     font-size: small;
+    margin-top: 10px;
    }
+  .game-card-modes{
+    color: white;
+    font-family:PressStart2P;
+    justify-content: center;
+    text-align: center;
+    font-size: 85%;
+  }
+  .modos-titulo{
+    display: flex;
+    align-items: center;
+    padding-left: 38%;
+    font-size: small;
+    margin-top: 10px;
+  }

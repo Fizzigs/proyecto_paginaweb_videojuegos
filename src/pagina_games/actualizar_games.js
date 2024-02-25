@@ -11,38 +11,42 @@
         try {
           console.log('Selected Filter en ActualizarJuegos:', selectedFilter);
   
-          let url = 'https://api.rawg.io/api/games?key=84dafbf2540d47389fc971ea576592fa';
+          let url = 'https://api.rawg.io/api/games?key=ad953c0ec6f340a4bfdc2c573f27598f';
   
           // Agregar lógica para construir la URL según el filtro seleccionado
           switch (selectedFilter) {
-            case 'filtroTopPopular':
-              // Reemplaza con la URL específica para filtroTopPopular
-              url = 'URL específica para filtroTopPopular';
+            case 'reset':
+              // Reemplaza con la URL específica para singleplayer
+              url = 'https://api.rawg.io/api/games?key=ad953c0ec6f340a4bfdc2c573f27598f';
               break;
-            case 'filtroLast30Days':
-              // Reemplaza con la URL específica para filtroLast30Days
-              url = 'URL específica para filtroLast30Days';
+            case 'singleplayer':
+              // Reemplaza con la URL específica para singleplayer
+              url = 'https://api.rawg.io/api/games?tags=31&key=ea831dc60aaa403d9c2893fbcd9980d2';
+              break;
+            case 'multiplayer':
+              // Reemplaza con la URL específica para multiplayer
+              url = 'https://api.rawg.io/api/games?tags=7&key=ea831dc60aaa403d9c2893fbcd9980d2';
               break;
             case 'filtroPC':
-              url = 'https://api.rawg.io/api/games?platforms=4&key=84dafbf2540d47389fc971ea576592fa';
+              url = 'https://api.rawg.io/api/games?platforms=4&key=ea831dc60aaa403d9c2893fbcd9980d2';
               break;
             case 'filtroPS3':
-              url = 'https://api.rawg.io/api/games?platforms=16&key=84dafbf2540d47389fc971ea576592fa';
+              url = 'https://api.rawg.io/api/games?platforms=16&key=ea831dc60aaa403d9c2893fbcd9980d2';
               break;
             case 'filtroPS4':
-              url = 'https://api.rawg.io/api/games?platforms=18&key=84dafbf2540d47389fc971ea576592fa';
+              url = 'https://api.rawg.io/api/games?platforms=18&key=ea831dc60aaa403d9c2893fbcd9980d2';
               break;
             case 'filtroPS5':
-              url = 'https://api.rawg.io/api/games?platforms=187&key=84dafbf2540d47389fc971ea576592fa';
+              url = 'https://api.rawg.io/api/games?platforms=187&key=ea831dc60aaa403d9c2893fbcd9980d2';
               break;
             case 'filtroXboxOne':
-              url = 'https://api.rawg.io/api/games?platforms=1&key=84dafbf2540d47389fc971ea576592fa';
+              url = 'https://api.rawg.io/api/games?platforms=1&key=ea831dc60aaa403d9c2893fbcd9980d2';
               break;
             case 'filtroXboxSeries':
-              url = 'https://api.rawg.io/api/games?platforms=186&key=84dafbf2540d47389fc971ea576592fa';
+              url = 'https://api.rawg.io/api/games?platforms=186&key=ea831dc60aaa403d9c2893fbcd9980d2';
               break;
             case 'filtroSwitch':
-              url = 'https://api.rawg.io/api/games?platforms=7&key=84dafbf2540d47389fc971ea576592fa';
+              url = 'https://api.rawg.io/api/games?platforms=7&key=ea831dc60aaa403d9c2893fbcd9980d2';
               break;
             default:
               console.error('Filtro no reconocido:', selectedFilter);
