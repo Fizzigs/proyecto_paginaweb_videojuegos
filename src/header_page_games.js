@@ -130,7 +130,7 @@ const Header = ({ email }) => {
         <div style={elementStylelogin}>
         {!isLoggedIn && (
           <Link to="/signin" style={linkStyle}>
-            <div style={buttonStyle}>Sign in</div>
+            <div style={buttonStyle}>Sign Up</div>
           </Link>
         )}
           <div style={imageContainerStyle} onClick={handleImageClick}>

@@ -5,6 +5,7 @@ import './paginagames.css';
 import JuegosList from './games_lista';
 import MenuBar from './menu_bar';
 import ActualizarJuegos from './actualizar_games';
+import flecha from 'C:/Users/Joan Atrio/proyecto_paginaweb_videojuegos/src/img/arriba.png';
 
 
 const PaginaGames = () => {
@@ -19,6 +20,7 @@ const PaginaGames = () => {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const containerRef = useRef();
+  const buttonRef = useRef();
 
   
   const getCustomMessage = (filterType) => {//Pasamos las variables dentro de filter las cuales definen las urls de cada filtro de la api
@@ -46,22 +48,22 @@ const PaginaGames = () => {
     }
   };
 
-  const fetchJuegos = async (pageNumber = 1, currentFilter = filter) => {
+  const fetchJuegos = async (pageNumber = 1, currentFilter = filter) => {//Especificamos el numero de la pagina, para especificar el filtro actual
     try {
       setLoading(true);
   
      //Urls para especificar los filtros al hacer expanded games
       const filterUrls = {
-        'Lista General': 'https://api.rawg.io/api/games?key=ea831dc60aaa403d9c2893fbcd9980d2',
-        'multiplayer': 'https://api.rawg.io/api/games?tags=7&key=ea831dc60aaa403d9c2893fbcd9980d2',
-        'singleplayer': 'https://api.rawg.io/api/games?tags=31&key=ea831dc60aaa403d9c2893fbcd9980d2',
-        'filtroPC': 'https://api.rawg.io/api/games?platforms=4&key=ea831dc60aaa403d9c2893fbcd9980d2',
-        'filtroPS3': 'https://api.rawg.io/api/games?platforms=16&key=ea831dc60aaa403d9c2893fbcd9980d2',
-        'filtroPS4':'https://api.rawg.io/api/games?platforms=18&key=ea831dc60aaa403d9c2893fbcd9980d2',
-        'filtroPS5':'https://api.rawg.io/api/games?platforms=187&key=ea831dc60aaa403d9c2893fbcd9980d2',
-        'filtroXboxOne':'https://api.rawg.io/api/games?platforms=1&key=ea831dc60aaa403d9c2893fbcd9980d2',
-        'filtroXboxSeries':'https://api.rawg.io/api/games?platforms=186&key=ea831dc60aaa403d9c2893fbcd9980d2',
-        'filtroSwitch': 'https://api.rawg.io/api/games?platforms=7&key=ea831dc60aaa403d9c2893fbcd9980d2',
+        'Lista General': 'https://api.rawg.io/api/games?key=4fe41649661c49c4a0d54af2a016f7de',
+        'multiplayer': 'https://api.rawg.io/api/games?tags=7&key=4fe41649661c49c4a0d54af2a016f7de',
+        'singleplayer': 'https://api.rawg.io/api/games?tags=31&key=4fe41649661c49c4a0d54af2a016f7de',
+        'filtroPC': 'https://api.rawg.io/api/games?platforms=4&key=4fe41649661c49c4a0d54af2a016f7de',
+        'filtroPS3': 'https://api.rawg.io/api/games?platforms=16&key=4fe41649661c49c4a0d54af2a016f7de',
+        'filtroPS4':'https://api.rawg.io/api/games?platforms=18&key=4fe41649661c49c4a0d54af2a016f7de',
+        'filtroPS5':'https://api.rawg.io/api/games?platforms=187&key=4fe41649661c49c4a0d54af2a016f7de',
+        'filtroXboxOne':'https://api.rawg.io/api/games?platforms=1&key=4fe41649661c49c4a0d54af2a016f7de',
+        'filtroXboxSeries':'https://api.rawg.io/api/games?platforms=186&key=4fe41649661c49c4a0d54af2a016f7de',
+        'filtroSwitch': 'https://api.rawg.io/api/games?platforms=7&key=4fe41649661c49c4a0d54af2a016f7de',
       };
   
       const url = filterUrls[currentFilter] || filterUrls['Lista General']; // Default to 'Lista General' if filter not found
@@ -131,24 +133,30 @@ const PaginaGames = () => {
         }
       }
     };
+    const handleScrollToTop = () => {
+      // Usar window.scrollTo para navegar al principio de la página
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
  
   return (
+    //Llamada general a los componentes dentro de pagina games.
     <div className={`pagina-container ${scrolled ? 'menu-bar-scrolled' : ''}`}>
       <Header />
       <h1 className="titulo_pagina">Games Page</h1>
       <div className="main-container">
+        
+        <ActualizarJuegos selectedFilter={filter} setJuegos={setJuegos} />
+        <div className="contenido-container">
         <MenuBar
           showMenu={showMenu}
           showMenu2={showMenu2}
           expandedReleased={() => setShowMenu(!showMenu)}
           expandedPlatforms={() => setShowMenu2(!showMenu2)}
-          scrolled={scrolled}
-          handleFilterChange={handleFilterChange}
+          scrolled={scrolled}// Pasa la función con la logica del scroll
+          handleFilterChange={handleFilterChange}// Pasa la función de la logica del filtro
           resetGameList={handleFilterChange} // Pasa la función al componente MenuBar
         />
-        <ActualizarJuegos selectedFilter={filter} setJuegos={setJuegos} />
-        <div className="contenido-container">
           <div className="lista-juegos">
             <div className="juegos-container">
               <h2 className="texto_lista_games">{`Games List ${selectedFilter !== 'Lista General' ? `- ${selectedFilter}` : ''}`}</h2>
@@ -157,6 +165,9 @@ const PaginaGames = () => {
             <JuegosList juegos={juegos} selectedFilter={selectedFilter} />
             {loading && <p>Loading games...</p>}
             <button onClick={handleLoadMore} className="load-more-button">Load More</button>
+            <button ref={buttonRef} onClick={handleScrollToTop} className="scroll-to-top-button">
+            <img src={flecha} alt="Scroll to Top" />
+            </button>
           </div>
         </div>
       </div>

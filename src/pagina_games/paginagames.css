@@ -46,7 +46,7 @@
     display: flex;
     justify-content: space-around; /* Puedes ajustar el espaciado entre los elementos según sea necesario */
     align-items: center;
-    gap: 50px ;
+    gap: 50px;
   }
   
   .text_bienvenidos{
@@ -61,7 +61,7 @@
   }
   .texto_lista_games{
   top: 100%; /* Coloca el mensaje adicional justo debajo del encabezado */
-right: 50%; 
+  right: 50%; 
   width: 90%;
   max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
   padding: 10px;
@@ -74,7 +74,6 @@ right: 50%;
   /* Otros estilos según tus preferencias */
 
   }
-  
   
   .modalstyle{
     display: flex;
@@ -96,7 +95,7 @@ right: 50%;
   }
   .modalstyle button {
     cursor: pointer;
-    padding: 10px;
+    padding: 100px;
     background-color: #333;
     color: #fff;
     border: none;
@@ -177,6 +176,8 @@ right: 50%;
 
 .dropdown-content {
   display: none;
+  transition: max-height 1s ease; /* Añade una transición para el cambio de altura máxima */
+
 }
 
 .dropdown-content button {
@@ -207,15 +208,11 @@ right: 50%;
   background-color: black; /* Color de fondo del menú */
   overflow: hidden; /* Oculta cualquier contenido que sobresalga del menú */
   padding-left: 20px;
-  position: fixed;
+  position: sticky;
   overflow-y: auto; /* agregar barra de desplazamiento vertical si es necesario */
-  animation-name: visible;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
   border-radius: 10px; /* Puedes ajustar el valor según sea necesario */
   text-align: center;
-
+  
 }
 
 
@@ -237,9 +234,8 @@ right: 50%;
 .contenido-container {
   display: flex;
   height: fit-content;
-  margin-left: 200px; /* ajusta el margen izquierdo para dejar espacio para el menú */
   padding: 10px; /* ajusta según tus necesidades */
-  transition: margin-left 0.3s ease; /* Agrega una transición suave al margen izquierdo */
+  transition: margin-left 1s ease; /* Agrega una transición suave al margen izquierdo */
 
 }
 
@@ -328,26 +324,26 @@ right: 50%;
   
 }
 .menubar-style{
-  position: fixed;
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  width: 100%;
   text-align: left;
 }
 .main-container {
-  display: flex;
   padding-left: 20px;
-  
 }
+
 .menu-bar-scroll{
   height: 100px; /* Establece la nueva altura cuando haces scroll */
-  top: 70px; /* Ajusta la posición vertical al hacer scroll */
+  top: 40px; /* Ajusta la posición vertical al hacer scroll */
   height: fit-content;
-  /* Otras reglas si las hay */
-  transition: height 0.3s ease-out; /* Ajusta la duración y la curva de transición según sea necesario */
+  transition: height 0.8s ease-out, top 0.8s ease-out; /* Ajusta la duración y la curva de transición según sea necesario */
   }
+
   .menu-bar-scrolled {
-    transition: height 0.3s ease-out, background-color 0.3s ease-out; /* Ajusta la duración y la curva de transición según sea necesario */
+    transition: background-color 1s ease-in-out; /* Ajusta la duración y la curva de transición según sea necesario */
+
   }
+
+
   .windows-icon{
     height: 50px;
     width: 50px;
@@ -472,4 +468,17 @@ right: 50%;
         font-family: PressStart2P;
         font-size:small;
         color: black;
+      }
+      .scroll-to-top-button {
+        background-color: white;
+      color: black;
+      font-family: PressStart2P;
+      border: none;
+      padding: 10px;
+      text-align: left; /* Alinea el texto a la izquierda */
+      margin: 5px;
+      cursor: pointer;
+      scroll-behavior: smooth; /* Agrega esta línea para el desplazamiento suave */
+
+      border-radius: 10px; /* Puedes ajustar el valor según sea necesario */
       }

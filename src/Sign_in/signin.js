@@ -17,7 +17,9 @@ function Signin() {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       // Redirigir a la página de tareas después del registro
-      alert("Sign in Succesfull");
+      alert("Sign Up Succesfull");
+      window.location.href = '/login'; // Cambia la ubicación actual del navegador
+
 
       navigate('/');
     } catch (error) {

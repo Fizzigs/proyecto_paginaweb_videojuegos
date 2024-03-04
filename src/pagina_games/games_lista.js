@@ -43,7 +43,7 @@
         
           const getPlataformas = async (juegoId) => {
             try {
-              const { data } = await axios.get(`https://api.rawg.io/api/games/${juegoId}/platforms?key=ea831dc60aaa403d9c2893fbcd9980d2`);
+              const { data } = await axios.get(`https://api.rawg.io/api/games/${juegoId}/platforms?key=4fe41649661c49c4a0d54af2a016f7de`);
               return data.results;
             } catch (error) {
               console.error('Hubo un error al obtener los detalles de las plataformas:', error);

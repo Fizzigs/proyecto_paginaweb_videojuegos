@@ -24,7 +24,7 @@ const Header = ({ email }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    // Obtener el correo electrónico del usuario almacenado en localStorage al cargar la aplicación
+    // Obtiene el correo electrónico del usuario almacenado en localStorage al cargar la aplicación
     const storedUserEmail = localStorage.getItem('userEmail');
     const storedUserProfileImage = localStorage.getItem('userProfileImage');
 
@@ -37,15 +37,14 @@ const Header = ({ email }) => {
   }, []);
 
   const handleLogout = () => {
-    // Eliminar el correo electrónico del usuario de localStorage al cerrar sesión
     localStorage.removeItem('userEmail');
+    // Elimina el correo electrónico del usuario de localStorage al cerrar sesión
     localStorage.removeItem('userProfileImage');
     setSelectedImage(usuariopredeterminadoImage); // Cambiar a la imagen predeterminada
     setShowChangeButton(false); // Opcional: puedes ocultar el botón de cambio de imagen si lo deseas
 
     setUserEmail('');
-    setIsLoggedIn(false); // Marcar al usuario como desconectado
-    // Puedes agregar aquí la lógica adicional para cerrar sesión en tu sistema de autenticación
+    setIsLoggedIn(false); // Marca al usuario como desconectado
     alert("Logged out successfully");
   };
 
@@ -142,6 +141,7 @@ const Header = ({ email }) => {
             <div style={buttonStyle}>Sign Up</div>
           </Link>
         )}
+        
         <div style={imageContainerStyle} onClick={handleImageClick}>
           <img src={selectedImage} alt="Imagen seleccionada" style={imageStyle} className="imagen_seleccionada" />
           <div style={elementStyle}>
@@ -258,8 +258,7 @@ const buttonStyle = {
   const MainPage = () => {
     const imageContainerStyle = {
       position: 'relative',
-      height:'21.6vh',
-      
+      height:'21.6vh',   
     };
     const textOverlayStyle = {
       position: 'absolute',
@@ -273,6 +272,7 @@ const buttonStyle = {
     };
 
     return (
+      // Contenido de pagina principal 
       <div>
         <div style={imageContainerStyle}>
           <img src={fondo1Image} alt="Gamer heaven" className='imageneshome' />
@@ -299,6 +299,7 @@ const buttonStyle = {
   function App() {  
    
   return (
+    //Rutas para navegar en pagina home
     <Router>
       <div className="App">
         <main>
@@ -315,7 +316,7 @@ const buttonStyle = {
             
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signin" element={<Signinpage />} />
-            <Route path="/Recuperacion" element={<RecuperacionPage />} />
+            {/* <Route path="/Recuperacion" element={<RecuperacionPage />} /> */}
             <Route path="/paginagames" element={<PaginagamesPage/>} />
           </Routes>
         </main>

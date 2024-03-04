@@ -9,7 +9,7 @@ const MenuBar = ({ showMenu, showMenu2, handleFilterChange, expandedReleased, ex
   return (
     <div className={`menu-bar ${scrolled ? 'menu-bar-scroll' : ''}`}>
       <div className="menu-section">
-      <button className="reset_list"onClick={handleFilterChange}>Reset<img src={resetImage} alt="Gamer heaven" className="Logo_reiniciar"/></button> 
+      <button className="reset_list" onClick={handleFilterChange}>Reset<img src={resetImage} alt="Gamer heaven" className="Logo_reiniciar"/></button> 
         <button onClick={() => expandedReleased(showMenu)}>☰ Release</button>
         <div className={`dropdown-content ${showMenu === true ? 'show' : 'hidden'}`}>
           <button onClick={() => handleFilterChange('singleplayer')}>Single player</button>
